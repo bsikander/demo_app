@@ -11,11 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140507100224) do
+ActiveRecord::Schema.define(version: 20140512090725) do
+
+  create_table "devices", force: true do |t|
+    t.integer  "user_id"
+    t.string   "token"
+    t.boolean  "enabled"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "platform"
+  end
 
   create_table "microposts", force: true do |t|
     t.string   "content"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", force: true do |t|
+    t.integer  "user_id"
+    t.string   "message"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

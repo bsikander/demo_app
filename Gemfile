@@ -8,6 +8,8 @@ group :development do
   gem 'sqlite3', '1.3.8'
 end
 
+gem 'gcm', :require =>'gcm'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 
@@ -28,6 +30,7 @@ gem 'turbolinks', '1.1.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.0.2'
+
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
