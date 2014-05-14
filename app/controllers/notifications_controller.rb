@@ -22,7 +22,7 @@ class NotificationsController < ApplicationController
 #  - ref: https://github.com/jnunemaker/httparty/blob/master/lib/httparty.rb#L40-L68
 #  gcm = GCM.new(api_key, timeout: 3)
 
-    registration_ids= ["12", "13"] # an array of one or more client registration IDs
+    registration_ids= ["APA91bEgE3VHEfA8RN5WaNIV76QynNij2tuPuishNch5vyRItxWzjJI9KA6V3qRHQYmkL8wnmD0bKPh61WACrMqR03-gcnAa54r9LmAo5_e1qZmVPyzbXRFA8e-JMVzkEqBU9Tl4gUT0nESX8XzYoC2H5gdH7jx_jw"] # an array of one or more client registration IDs
     options = {data: {score: "123"}, collapse_key: "updated_score"}
     response = gcm.send_notification(registration_ids, options)
 
